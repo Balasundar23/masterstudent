@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="../html/style.css">
+</head>
+
+<body>
+
+    <div id="display"></div>
+    <script type="text/javascript">
+
+        var rawData = sessionStorage.getItem("Data");
+        var data = JSON.parse(rawData);
+        var parsed = "<table>";
+        for (i = 0; i < data.length; i++) {
+            var myobj = data[i];
+            parsed = parsed + "<tr><td>" +"" + myobj.exp + "</td><td>" + myobj.val +"  "+ "</td>";
+        }
+        parsed = parsed + "</table>";
+        document.getElementById('display').innerHTML = parsed;
+    </script>
+
+</body>
+
+</html>

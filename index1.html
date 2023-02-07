@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="../html/style.css">
+</head>
+<body>
+        <div class="box">
+            
+                    <h1> Student Login Here</h1>
+            
+                    <form name="myform"  action="function.html" method="GET" >
+            
+                        <p>Username</p>
+                        <input type="text" name="uname" placeholder="Enter Username " required="">
+            
+                        <p>Password</p>
+                        <input type="password" name="upswd" placeholder="Enter Password" required="">
+            
+                       <a href=""> <input type="submit"  name="" value="Login"  > </a>
+                             
+                        <br><br>
+                        <a href="signup.html">Register for new account ?</a>
+            
+                    </form>
+                    
+                </div>
+
+<script type="text/javascript">
+   // prompt("we have a calculations you can log in and get an answer");
+    function zero(fun){
+           return fun ? fun(0) : 0;
+       }
+       function one(fun){
+           return fun ? fun(1) : 1;
+       }
+       function two(fun){
+           return fun ? fun(2) : 2;
+       }
+       function three(fun){
+           return fun ? fun(3) : 3;
+       }
+       function four(fun){
+           return fun ? fun(4) : 4;
+       }
+       function five(fun){
+           return fun ? fun(5) : 5;
+       }
+       function six(fun){
+           return fun ? fun(6) : 6;
+       }
+       function seven(fun){
+           return fun ? fun(7) : 7;
+       }
+       function eight(fun){
+           return fun ? fun(8) : 8;
+       }
+       function nine(fun){
+           return fun ? fun(9) : 9;
+       }
+
+       function plus(b){
+
+        return function(a){
+            return a+b;
+        };
+       }
+       function minus(b){
+
+return function(a){
+    return a-b;
+};
+}
+function times(b){
+
+return function(a){
+    return a*b;
+};
+}
+function divided_by(b){
+
+return function(a){
+    return a/b;
+};
+}
+
+var a = String(prompt());
+var b = Math.round(eval(a));
+
+alert(b);  
+
+var rawData = sessionStorage.getItem("Data");
+var data = [];
+if(rawData) data = JSON.parse(rawData);    
+
+data.push({exp:a, val:b});
+sessionStorage.setItem("Data", JSON.stringify(data));
+
+</script>
+
+</body>
+</html>
